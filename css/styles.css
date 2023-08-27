@@ -47,7 +47,7 @@ body {
 }
 
 .topoEmail{
-    min-width: 30%;
+    min-width: 20%;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -96,7 +96,13 @@ li.divider::before {
     /* Altura do divisor vertical */
     background-color: #4b4b4b;
     /* Cor do divisor vertical */
+    
 
+}
+
+#suprimir1{
+    color: #000;
+    width: 5px;
 }
 
 .menu {
@@ -310,7 +316,21 @@ li.divider::before {
 
 
 /* """"""""""""ajuste de menu"""""""""""""""" */
+@media(max-width : 500px){
+    .topocontato{
+        font-size: 0.5em;
+    }
+}
 
+@media (max-width : 600px){
+    .topoEmail{
+        width: 20%;
+    }
+    .topoEmail span{
+        display: none;
+    }
+    
+}
 
 @media (max-width: 991px) {
     #nav {
@@ -320,7 +340,7 @@ li.divider::before {
         /* Esconder o menu principal em resoluções menores que 1000 pixels */
         justify-content: space-around;
         background-color: #fff;
-        font-size: .8rem !important;
+        font-size: 1rem !important;
         background: transparent;
         border: none;
         font-size: 1em;
@@ -332,8 +352,8 @@ li.divider::before {
         padding: 0;
     }
 
-    .menu {
-        
+    #suprimir{
+        display: none;
     }
 
     #menu-button {
@@ -423,6 +443,10 @@ li.divider::before {
         max-width: 40%;
     }
 
+    .divider2{
+        background-color: #000;
+    }
+
     .divider::before {
         content: "";
         /* Pseudo-elemento para criar o divisor */
@@ -505,13 +529,14 @@ li.divider::before {
 .menupedagogico {
     width: 100%;
     height: auto; 
-    display: flex;  
-    flex-direction: row; 
+    display: grid;  
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
     align-items: center;    
     justify-content: center;
     align-items: center;
     text-align: center;     
-    
+    margin: auto;
 }
 
 .menupedag {  
@@ -565,11 +590,10 @@ li.divider::before {
 }
 /* """"""""""""Query menu pedagógico"""""""""""""""" */
 
-
-@media screen and (min-width: 446px) and (max-width: 800px) {
+@media (min-width: 500px) and (max-width: 991px) {
     .menupedagogico {        
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         
     }       
     
@@ -580,16 +604,22 @@ li.divider::before {
     }
 
     .menupedagogico i {
-        font-size: 2em;
+        font-size: 4em;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width : 499px){
+    .menupedagogico {  
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
     .menupedagogico i {
         font-size: 3em;
-
     }
 }
+
+
 
 /* """"""""""""Dados da escola"""""""""""""""" */
 
@@ -692,7 +722,7 @@ li.divider::before {
 
 
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
     .icon {
         font-size: 1.5em;
     }
@@ -707,7 +737,7 @@ li.divider::before {
 }
 
 
-@media screen and (min-width: 501px) and (max-width: 991px) {
+@media (min-width: 501px) and (max-width: 991px) {
     .icon {
         font-size: 1.8em;
     }
@@ -721,7 +751,7 @@ li.divider::before {
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 2020px) {
+@media (min-width: 992px) and (max-width: 2020px) {
     .icon {
         font-size: 1.8em;
     }
@@ -762,14 +792,17 @@ h1 {
 }
 
 .postG {
-    padding-top: 50px;
+    
 }
 
 .col-left {
     flex: 1;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .col-left h3 {
@@ -786,10 +819,12 @@ h1 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    padding-top: 100px;
 }
 
 .col-lg-6 {
-    padding: 0;
+    
 
 }
 
@@ -805,15 +840,19 @@ h1 {
 }
 
 .postagem iframe {
-    width: auto;
+    width: 100%;
     height: 100%;
 
 }
 
 .textpost {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
+    
+}
 
+.textpost p{
+    font-size: 1em;
 }
 
 .postagem img {
@@ -835,6 +874,23 @@ h1 {
     text-align: center;
 }
 
+
+@media (max-width : 1050px){
+    
+    
+    .postagem{
+        flex-direction: column;
+    }
+}
+
+@media (min-width : 400px) and (max-width : 991px){
+    .postG{
+        flex-direction: column;
+    }
+    .postP{
+        
+    }
+}
 
 
 /* """"""""""""Propagation"""""""""""""""" */
@@ -911,13 +967,9 @@ h1 {
 
 }
 
-@media (max-width : 500px) {
-    .boxprop {}
 
-    #content-box {}
-}
 
-@media (max-width : 800px) {
+@media (max-width : 750px) {
     .iconCard {
         font-size: 3em;
     }
@@ -926,11 +978,10 @@ h1 {
         font-size: 1em;
     }
 
-    .boxprop {
-        grid-template-columns: repeat(2, 1fr);
-        /* Cria 3 colunas de tamanho igual */
+    #boxprop {
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
-        /* Espaçamento entre os cards */
+     
     }
 }
 
@@ -1026,14 +1077,19 @@ h1 {
     transition: opacity 1s ease-in-out;
 }
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .localization {
         flex-direction: column;
         align-items: center;
 
     }
 
+    .socialNews{
+       
+    }
+
     .titleTop {
+        width: 80%;
         font-size: 1.7rem !important;
 
     }

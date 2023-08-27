@@ -1,13 +1,3 @@
-// var menuButton = document.getElementById("menu-button");
-// var menu = document.getElementById("nav");
-
-// menuButton.addEventListener("click", function() {
-//   if (menu.style.display === "block") {
-//     menu.style.display = "none";
-//   } else {
-//     menu.style.display = "block";
-//   }
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   var menuButton = document.getElementById("menu-button");
